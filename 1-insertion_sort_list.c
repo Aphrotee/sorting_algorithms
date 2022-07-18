@@ -43,5 +43,6 @@ void insertion_sort_list(listint_t **list)
 		temp = temp->next;
 	}
 	free(temp);
+	temp2 = temp2->next->next;
 	free(temp2);
 }
