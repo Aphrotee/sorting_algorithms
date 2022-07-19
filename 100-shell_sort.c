@@ -40,6 +40,8 @@ void shell_sort(int *array, size_t size)
 	long int j;
 	size_t i, k, a, c;
 
+	if (array == NULL || size <= 1)
+		return;
 	seq = knuth_seq(size);
 	if (!seq)
 		return;
