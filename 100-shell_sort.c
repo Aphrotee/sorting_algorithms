@@ -58,23 +58,23 @@ void shell_sort(int *array, size_t size)
  */
 listint_t *knuth_seq(size_t size)
 {
-        listint_t *list, *node;
-        int k = 1, *tmp;
+	listint_t *list, *node;
+	int k = 1, *tmp;
 
-        list = NULL;
-        while ((size / k) >= 2)
-        {
-                node = (listint_t *)malloc(sizeof(listint_t));
-                if (!node)
-                        return (NULL);
-                node->prev = NULL;
-                node->next = list;
-                tmp = (int *)&node->n;
-                *tmp = k;
-                list = node;
-                k = (k * 3) + 1;
-        }
-        return (list);
+	list = NULL;
+	while ((size / k) >= 2)
+	{
+		node = (listint_t *)malloc(sizeof(listint_t));
+		if (!node)
+			return (NULL);
+		node->prev = NULL;
+		node->next = list;
+	tmp = (int *)&node->n;
+		*tmp = k;
+		list = node;
+		k = (k * 3) + 1;
+	}
+	return (list);
 }
 
 /**
@@ -90,7 +90,7 @@ void free_seq(listint_t *list)
 	if (!list)
 		return;
 	temp = list;
-	while(list)
+	while (list)
 	{
 		list = list->next;
 		free(temp);
