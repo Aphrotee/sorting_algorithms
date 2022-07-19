@@ -29,6 +29,7 @@ void sort_alg(int *arr, int left, int right, size_t size);
 void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 listint_t *knuth_seq(size_t size);
+void free_seq(listint_t *list);
 void cocktail_sort_list(listint_t **list);
 void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
