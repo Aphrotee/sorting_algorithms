@@ -10,9 +10,7 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *temp, *temp2, *t1, *t2;
 
-	temp = (listint_t *)malloc(sizeof(listint_t));
-	temp2 = (listint_t *)malloc(sizeof(listint_t));
-	if (*list == NULL || list == NULL || !temp || !temp2)
+	if (*list == NULL || list == NULL)
 		return;
 	temp = *list;
 	temp = temp->next;
@@ -42,7 +40,4 @@ void insertion_sort_list(listint_t **list)
 		}
 		temp = temp->next;
 	}
-	free(temp);
-	temp2 = temp2->next->next;
-	free(temp2);
 }
