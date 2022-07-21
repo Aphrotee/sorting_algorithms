@@ -1,6 +1,22 @@
 #include "sort.h"
 
 /**
+ * swap - swaps two integers
+ * @a: first input address
+ * @b: second input address
+ *
+ * Return: Nothing
+ */
+void swap(int *a, int *b)
+{
+	int c;
+
+	c = *a;
+	*a = *b;
+	*b = c;
+}
+
+/**
  * shell_sort - quick sort algorithm
  * @array: array of integers to be sorted
  * @size: size of array
